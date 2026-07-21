@@ -50,7 +50,7 @@ function photoFor(name,category){
 function render(){
   document.getElementById('filters').innerHTML=categories.map(category=>`<button class="filter ${state.category===category?'active':''}" data-category="${category}"><span>${icons[category]||'*'}</span>${category}</button>`).join('');
   const items=MENU.filter(item=>(state.category==='Todos'||item.category===state.category)&&item.name.toLowerCase().includes(state.query));
-  document.getElementById('products').innerHTML=items.map(item=>{const photo=photoFor(item.name,item.category);const publishedPhoto=photo?.replace('assets/','');return `<article class="product"><div class="food ${photo?'':'no-photo'}" ${photo?`style="background-image:url('${publishedPhoto}')" role="img" aria-label="Foto ilustrativa de ${item.name}"`:''}></div><div class="product-content"><p class="category">${item.category}</p><h3>${item.name}</h3><p class="description">${item.description}</p><strong>${money(item.price)}</strong></div></article>`}).join('');
+  document.getElementById('products').innerHTML=items.map(item=>{const photo=photoFor(item.name,item.category);return `<article class="product"><div class="food ${photo?'':'no-photo'}" ${photo?`style="background-image:url('${photo}')" role="img" aria-label="Foto ilustrativa de ${item.name}"`:''}></div><div class="product-content"><p class="category">${item.category}</p><h3>${item.name}</h3><p class="description">${item.description}</p><strong>${money(item.price)}</strong></div></article>`}).join('');
   document.getElementById('empty').hidden=items.length>0;
   document.querySelectorAll('[data-category]').forEach(button=>button.onclick=()=>{state.category=button.dataset.category;render()});
 }
