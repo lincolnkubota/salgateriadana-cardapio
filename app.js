@@ -1,0 +1,58 @@
+const money=value=>value.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const state={category:'Todos',query:''};
+const categories=['Todos',...new Set(MENU.map(item=>item.category))];
+const icons={Todos:'*','Salgados e lanches':'S','Pratos e acompanhamentos':'P',Bebidas:'B','Doces e sobremesas':'D'};
+function photoFor(name,category){
+  const item=name.toLowerCase();
+  if(category==='Pratos e acompanhamentos'&&!item.startsWith('batata frita')&&!item.startsWith('salada')&&!item.startsWith('omelete'))return null;
+  if(item==='bolinho de carne')return 'assets/bolinho-de-carne-foto.png';
+  if(item.startsWith('coxinha'))return 'assets/coxinha-foto.png';
+  if(item.startsWith('esfiha'))return 'assets/esfiha-fechada-foto.png';
+  if(item==='folhado de bauru')return 'assets/folhado-bauru-foto.png';
+  if(item==='fogazza de queijo')return 'assets/fogazza-queijo-foto.png';
+  if(item.startsWith('pastel'))return 'assets/pastel-foto.png';
+  if(item==='pão de queijo')return 'assets/pao-de-queijo-foto.png';
+  if(item==='pão de batata')return 'assets/pao-de-batata-foto.png';
+  if(item==='kibe')return 'assets/kibe-foto.png';
+  if(item==='lanche natural de frango desfiado')return 'assets/lanche-natural-frango-foto.png';
+  if(item==='lanche natural de atum desfiado')return 'assets/lanche-natural-atum-foto.png';
+  if(item==='pão na chapa'||item==='pão na chapa com requeijão')return 'assets/pao-na-chapa-foto.png';
+  if(item==='pão com queijo mussarela')return 'assets/pao-com-queijo-foto.png';
+  if(item==='pão com ovo')return 'assets/pao-com-ovo-foto.png';
+  if(item==='misto quente')return 'assets/misto-quente-foto.png';
+  if(item==='x - burguer')return 'assets/x-burguer-foto.png';
+  if(item==='x - salada')return 'assets/x-salada-foto.png';
+  if(item==='batata frita (porção 200gr)')return 'assets/batata-frita-foto.png';
+  if(item.startsWith('salada (alface tomate cenoura e pepino)'))return 'assets/salada-foto.png';
+  if(item==='omelete simples')return 'assets/omelete-simples-foto.png';
+  if(item==='omelete completo')return 'assets/omelete-completo-foto.png';
+  if(item.startsWith('coca cola'))return 'assets/bebidas-cola-foto.png';
+  if(item.startsWith('fanta sabor laranja'))return 'assets/refrigerante-laranja-foto.png';
+  if(item.startsWith('fanta sabor uva'))return 'assets/refrigerante-uva-foto.png';
+  if(item.startsWith('sprite'))return 'assets/sprite-foto.png';
+  if(item.startsWith('água garrafa'))return 'assets/agua-foto.png';
+  if(item.startsWith('água de coco'))return 'assets/agua-de-coco-foto.png';
+  if(item.includes('suco')||item.startsWith('maguary')||item.startsWith('natural one'))return 'assets/sucos-foto.png';
+  if(item.startsWith('energético'))return 'assets/energeticos-foto.png';
+  if(item.startsWith('chá ice tea'))return 'assets/cha-gelado-foto.png';
+  if(item.startsWith('h2o')||item.startsWith('h20'))return 'assets/h2o-foto.png';
+  if(item.startsWith('achocolatado'))return 'assets/achocolatados-foto.png';
+  if(item.startsWith('iogurte')||item.startsWith('whey'))return 'assets/iogurtes-foto.png';
+  if(item.startsWith('cápsula'))return 'assets/capsulas-cafe-foto.png';
+  if(item==='bolo no pote')return 'assets/bolo-no-pote-foto.png';
+  if(item==='bolo no pedaço')return 'assets/bolo-no-pedaco-foto.png';
+  if(item==='pudim de leite condensado')return 'assets/pudim-leite-foto.png';
+  if(item==='pudim de chocolate')return 'assets/pudim-chocolate-foto.png';
+  if(item.startsWith('gelatina'))return 'assets/gelatina-mosaico-foto.png';
+  if(item.includes('biscoito')||item.startsWith('barra de cereal')||item.startsWith('bombom')||item.startsWith('chocolate')||item.startsWith('pastilha')||item.startsWith('bala')||item.startsWith('paçoca')||item.startsWith('pé de')||item.startsWith('pingo de leite')||item.startsWith('bananinha')||item.startsWith('salgadinhos'))return 'assets/doces-salgadinhos-foto.png';
+  return 'assets/capa-cardapio.jpeg';
+}
+function render(){
+  document.getElementById('filters').innerHTML=categories.map(category=>`<button class="filter ${state.category===category?'active':''}" data-category="${category}"><span>${icons[category]||'*'}</span>${category}</button>`).join('');
+  const items=MENU.filter(item=>(state.category==='Todos'||item.category===state.category)&&item.name.toLowerCase().includes(state.query));
+  document.getElementById('products').innerHTML=items.map(item=>{const photo=photoFor(item.name,item.category);const publishedPhoto=photo?.replace('assets/','');return `<article class="product"><div class="food ${photo?'':'no-photo'}" ${photo?`style="background-image:url('${publishedPhoto}')" role="img" aria-label="Foto ilustrativa de ${item.name}"`:''}></div><div class="product-content"><p class="category">${item.category}</p><h3>${item.name}</h3><p class="description">${item.description}</p><strong>${money(item.price)}</strong></div></article>`}).join('');
+  document.getElementById('empty').hidden=items.length>0;
+  document.querySelectorAll('[data-category]').forEach(button=>button.onclick=()=>{state.category=button.dataset.category;render()});
+}
+document.getElementById('search').addEventListener('input',event=>{state.query=event.target.value.toLowerCase();render()});
+render();
