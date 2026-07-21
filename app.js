@@ -15,7 +15,7 @@ function photoFor(name,category){
   if(item==='pão de batata')return 'assets/pao-de-batata-foto.png';
   if(item==='kibe')return 'assets/kibe-foto.png';
   if(item==='lanche natural de frango desfiado')return 'assets/lanche-natural-frango-foto.png';
-  if(item==='lanche natural de atum desfiado')return 'assets/lanche-natural-atum-foto.png';
+ if(item==='lanche natural de atum desfiado'||item==='sanduíche de patê de atum')return 'assets/lanche-natural-atum-foto.png';
   if(item==='pão na chapa'||item==='pão na chapa com requeijão')return 'assets/pao-na-chapa-foto.png';
   if(item==='pão com queijo mussarela')return 'assets/pao-com-queijo-foto.png';
   if(item==='pão com ovo')return 'assets/pao-com-ovo-foto.png';
