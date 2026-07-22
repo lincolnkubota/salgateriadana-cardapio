@@ -15,7 +15,7 @@ function photoFor(name,category){
   if(item==='pão de batata')return 'assets/pao-de-batata-foto.png';
   if(item==='kibe')return 'assets/kibe-foto.png';
   if(item==='lanche natural de frango desfiado')return 'assets/lanche-natural-frango-foto.png';
- if(item==='lanche natural de atum desfiado'||item==='sanduíche de patê de atum')return 'assets/lanche-natural-atum-foto.png';
+  if(item==='lanche natural de atum desfiado'||item==='sanduíche de patê de atum')return 'assets/lanche-natural-atum-foto.png';
   if(item==='pão na chapa'||item==='pão na chapa com requeijão')return 'assets/pao-na-chapa-foto.png';
   if(item==='pão com queijo mussarela')return 'assets/pao-com-queijo-foto.png';
   if(item==='pão com ovo')return 'assets/pao-com-ovo-foto.png';
@@ -44,6 +44,8 @@ function photoFor(name,category){
   if(item==='pudim de leite condensado')return 'assets/pudim-leite-foto.png';
   if(item==='pudim de chocolate')return 'assets/pudim-chocolate-foto.png';
   if(item.startsWith('gelatina'))return 'assets/gelatina-mosaico-foto.png';
+  if(item==='chocolates lacta')return 'assets/chocolates-lacta-foto.png';
+  if(item==='cocada caseira')return 'assets/cocada-caseira-foto.png';
   if(item.includes('biscoito')||item.startsWith('barra de cereal')||item.startsWith('bombom')||item.startsWith('chocolate')||item.startsWith('pastilha')||item.startsWith('bala')||item.startsWith('paçoca')||item.startsWith('pé de')||item.startsWith('pingo de leite')||item.startsWith('bananinha')||item.startsWith('salgadinhos'))return 'assets/doces-salgadinhos-foto.png';
   return 'assets/capa-cardapio.jpeg';
 }
