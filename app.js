@@ -47,6 +47,7 @@ function photoFor(name,category){
   if(item.startsWith('gelatina'))return 'assets/gelatina-mosaico-foto.png';
   if(item==='chocolates lacta')return 'assets/chocolates-lacta-foto.png';
   if(item==='cocada caseira')return 'assets/cocada-caseira-foto.png';
+  if(item==='salgadinho fofura'||item==='bolo bauducco'||item==='roll bauducco')return 'assets/doces-salgadinhos-foto.png';
   if(item.includes('biscoito')||item.startsWith('barra de cereal')||item.startsWith('bombom')||item.startsWith('chocolate')||item.startsWith('pastilha')||item.startsWith('bala')||item.startsWith('paçoca')||item.startsWith('pé de')||item.startsWith('pingo de leite')||item.startsWith('bananinha')||item.startsWith('salgadinhos'))return 'assets/doces-salgadinhos-foto.png';
   return 'assets/capa-cardapio.jpeg';
 }
