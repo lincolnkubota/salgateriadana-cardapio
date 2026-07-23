@@ -30,6 +30,7 @@ function photoFor(name,category){
   if(item.startsWith('fanta sabor laranja'))return 'assets/refrigerante-laranja-foto.png';
   if(item.startsWith('fanta sabor uva'))return 'assets/refrigerante-uva-foto.png';
   if(item.startsWith('sprite'))return 'assets/sprite-foto.png';
+  if(item==='pepsi garrafa 200 ml')return 'assets/pepsi-200ml-foto.png';
   if(item.startsWith('schweppes citrus'))return 'assets/schweppes-citrus-foto.png';
   if(item.startsWith('água garrafa'))return 'assets/agua-foto.png';
   if(item.startsWith('água de coco'))return 'assets/agua-de-coco-foto.png';
@@ -47,6 +48,8 @@ function photoFor(name,category){
   if(item.startsWith('gelatina'))return 'assets/gelatina-mosaico-foto.png';
   if(item==='chocolates lacta')return 'assets/chocolates-lacta-foto.png';
   if(item==='cocada caseira')return 'assets/cocada-caseira-foto.png';
+  if(item==='iogurte fazenda')return 'assets/iogurte-fazenda-foto.png';
+  if(item==='iogurte itambé')return 'assets/iogurte-itambe-foto.png';
   if(item==='salgadinho fofura'||item==='bolo bauducco'||item==='roll bauducco')return 'assets/doces-salgadinhos-foto.png';
   if(item.includes('biscoito')||item.startsWith('barra de cereal')||item.startsWith('bombom')||item.startsWith('chocolate')||item.startsWith('pastilha')||item.startsWith('bala')||item.startsWith('paçoca')||item.startsWith('pé de')||item.startsWith('pingo de leite')||item.startsWith('bananinha')||item.startsWith('salgadinhos'))return 'assets/doces-salgadinhos-foto.png';
   return 'assets/capa-cardapio.jpeg';
