@@ -30,6 +30,7 @@ function photoFor(name,category){
   if(item.startsWith('fanta sabor laranja'))return 'assets/refrigerante-laranja-foto.png';
   if(item.startsWith('fanta sabor uva'))return 'assets/refrigerante-uva-foto.png';
   if(item.startsWith('sprite'))return 'assets/sprite-foto.png';
+  if(item.startsWith('schweppes citrus'))return 'assets/schweppes-citrus-foto.png';
   if(item.startsWith('água garrafa'))return 'assets/agua-foto.png';
   if(item.startsWith('água de coco'))return 'assets/agua-de-coco-foto.png';
   if(item.includes('suco')||item.startsWith('maguary')||item.startsWith('natural one'))return 'assets/sucos-foto.png';
@@ -38,7 +39,7 @@ function photoFor(name,category){
   if(item.startsWith('h2o')||item.startsWith('h20'))return 'assets/h2o-foto.png';
   if(item.startsWith('achocolatado'))return 'assets/achocolatados-foto.png';
   if(item.startsWith('iogurte')||item.startsWith('whey'))return 'assets/iogurtes-foto.png';
-  if(item.startsWith('cápsula'))return 'assets/capsulas-cafe-foto.png';
+  if(item.startsWith('cápsula')||item==='capuccino')return 'assets/capsulas-cafe-foto.png';
   if(item==='bolo no pote')return 'assets/bolo-no-pote-foto.png';
   if(item==='bolo no pedaço')return 'assets/bolo-no-pedaco-foto.png';
   if(item==='pudim de leite condensado')return 'assets/pudim-leite-foto.png';
