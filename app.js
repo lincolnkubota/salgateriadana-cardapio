@@ -15,7 +15,7 @@ function photoFor(name,category){
   if(item==='pão de batata')return 'assets/pao-de-batata-foto.png';
   if(item==='kibe')return 'assets/kibe-foto.png';
   if(item==='lanche natural de frango desfiado')return 'assets/lanche-natural-frango-foto.png';
-  if(item==='lanche natural de atum desfiado'||item==='sanduíche de patê de atum')return 'assets/lanche-natural-atum-foto.png';
+  if(item==='lanche natural de atum desfiado'||item==='sanduíche de patê de atum'||item==='sanduíche de atum')return 'assets/lanche-natural-atum-foto.png';
   if(item==='pão na chapa'||item==='pão na chapa com requeijão')return 'assets/pao-na-chapa-foto.png';
   if(item==='pão com queijo mussarela')return 'assets/pao-com-queijo-foto.png';
   if(item==='pão com ovo')return 'assets/pao-com-ovo-foto.png';
@@ -31,7 +31,8 @@ function photoFor(name,category){
   if(item==='panqueca com arroz')return 'assets/panqueca-arroz-foto.png';
   if(item==='panqueca com fritas')return 'assets/panqueca-fritas-foto.png';
   if(item==='panqueca com salada')return 'assets/panqueca-salada-foto.png';
-  if(item.startsWith('bife de linguiça em manta'))return 'assets/bife-linguica-manta-foto.png';
+  if(item==='bife de linguiça (avulso)')return 'assets/bife-linguica-manta-foto.png';
+  if(item==='bife de linguiça com acompanhamento')return 'assets/bife-linguica-acompanhamento-foto.png';
   if(item.startsWith('coca cola'))return 'assets/bebidas-cola-foto.png';
   if(item.startsWith('fanta sabor laranja'))return 'assets/refrigerante-laranja-foto.png';
   if(item.startsWith('fanta sabor uva'))return 'assets/refrigerante-uva-foto.png';
@@ -63,7 +64,7 @@ function photoFor(name,category){
 function render(){
   document.getElementById('filters').innerHTML=categories.map(category=>`<button class="filter ${state.category===category?'active':''}" data-category="${category}"><span>${icons[category]||'*'}</span>${category}</button>`).join('');
   const items=MENU.filter(item=>(state.category==='Todos'||item.category===state.category)&&item.name.toLowerCase().includes(state.query));
-  document.getElementById('products').innerHTML=items.map(item=>{const photo=photoFor(item.name,item.category);return `<article class="product"><div class="food ${photo?'':'no-photo'}" ${photo?`style="background-image:url('${photo}')" role="img" aria-label="Foto ilustrativa de ${item.name}"`:''}></div><div class="product-content"><p class="category">${item.category}</p><h3>${item.name}</h3><p class="description">${item.description}</p><strong>${money(item.price)}</strong></div></article>`}).join('');
+  document.getElementById('products').innerHTML=items.map(item=>{const photo=photoFor(item.name,item.category);const imageClass=item.name.toLowerCase().startsWith('panqueca')?' panqueca-photo':'';return `<article class="product"><div class="food${imageClass} ${photo?'':'no-photo'}" ${photo?`style="background-image:url('${photo}')" role="img" aria-label="Foto ilustrativa de ${item.name}"`:''}></div><div class="product-content"><p class="category">${item.category}</p><h3>${item.name}</h3><p class="description">${item.description}</p><strong>${money(item.price)}</strong></div></article>`}).join('');
   document.getElementById('empty').hidden=items.length>0;
   document.querySelectorAll('[data-category]').forEach(button=>button.onclick=()=>{state.category=button.dataset.category;render()});
 }
