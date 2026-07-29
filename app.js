@@ -1,7 +1,7 @@
 const money=value=>value.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
 const state={category:'Todos',query:''};
 const categories=['Todos',...new Set(MENU.map(item=>item.category))];
-const icons={Todos:'*','Salgados e lanches':'S','Pratos e acompanhamentos':'P',Bebidas:'B','Doces e sobremesas':'D'};
+const icons={Todos:'*','Salgados e lanches':'S','Pratos e acompanhamentos':'P','Pratos Rápidos':'R',Bebidas:'B','Doces e sobremesas':'D'};
 function photoFor(name,category){
   const item=name.toLowerCase();
   if(category==='Pratos e acompanhamentos'&&!item.startsWith('batata frita')&&!item.startsWith('salada')&&!item.startsWith('omelete'))return null;
@@ -22,10 +22,16 @@ function photoFor(name,category){
   if(item==='misto quente')return 'assets/misto-quente-foto.png';
   if(item==='x - burguer')return 'assets/x-burguer-foto.png';
   if(item==='x - salada')return 'assets/x-salada-foto.png';
+  if(item==='x-linguiça')return 'assets/x-linguica-foto.png';
   if(item==='batata frita (porção 200gr)')return 'assets/batata-frita-foto.png';
   if(item.startsWith('salada (alface tomate cenoura e pepino)'))return 'assets/salada-foto.png';
   if(item==='omelete simples')return 'assets/omelete-simples-foto.png';
   if(item==='omelete completo')return 'assets/omelete-completo-foto.png';
+  if(item==='panqueca avulsa')return 'assets/panqueca-avulsa-foto.png';
+  if(item==='panqueca com arroz')return 'assets/panqueca-arroz-foto.png';
+  if(item==='panqueca com fritas')return 'assets/panqueca-fritas-foto.png';
+  if(item==='panqueca com salada')return 'assets/panqueca-salada-foto.png';
+  if(item.startsWith('bife de linguiça em manta'))return 'assets/bife-linguica-manta-foto.png';
   if(item.startsWith('coca cola'))return 'assets/bebidas-cola-foto.png';
   if(item.startsWith('fanta sabor laranja'))return 'assets/refrigerante-laranja-foto.png';
   if(item.startsWith('fanta sabor uva'))return 'assets/refrigerante-uva-foto.png';
