@@ -28,7 +28,6 @@ function photoFor(name,category){
   if(item==='omelete simples')return 'assets/omelete-simples-foto.png';
   if(item==='omelete completo')return 'assets/omelete-completo-foto.png';
   if(item==='panqueca avulsa')return 'assets/panqueca-avulsa-foto.png';
-  if(item==='panqueca com arroz')return 'assets/panqueca-arroz-foto.png';
   if(item==='panqueca com fritas')return 'assets/panqueca-fritas-foto.png';
   if(item==='panqueca com salada')return 'assets/panqueca-salada-foto.png';
   if(item==='bife de linguiça (avulso)')return 'assets/bife-linguica-manta-foto.png';
