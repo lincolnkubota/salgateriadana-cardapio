@@ -40,7 +40,8 @@ function photoFor(name,category){
   if(item.startsWith('schweppes citrus'))return 'assets/schweppes-citrus-foto.png';
   if(item.startsWith('água garrafa'))return 'assets/agua-foto.png';
   if(item.startsWith('água de coco'))return 'assets/agua-de-coco-foto.png';
-  if(item.includes('suco')||item.startsWith('maguary')||item.startsWith('natural one'))return 'assets/sucos-foto.png';
+  if(item.includes('suco')||item.startsWith('del valle')||item.startsWith('maguary')||item.startsWith('natural one'))return 'assets/sucos-foto.png';
+  if(item.startsWith('monster'))return 'assets/energeticos-foto.png';
   if(item.startsWith('energético'))return 'assets/energeticos-foto.png';
   if(item.startsWith('chá ice tea'))return 'assets/cha-gelado-foto.png';
   if(item.startsWith('h2o')||item.startsWith('h20'))return 'assets/h2o-foto.png';
@@ -49,14 +50,16 @@ function photoFor(name,category){
   if(item==='iogurte itambé')return 'assets/iogurte-itambe-foto.png';
   if(item.startsWith('iogurte')||item.startsWith('whey'))return 'assets/iogurtes-foto.png';
   if(item.startsWith('cápsula')||['expresso','café com leite','capuccino','nescau'].includes(item))return 'assets/capsulas-cafe-foto.png';
+  if(['expresso','expresso lungo','caf\u00e9 com leite','cappuccino','nescau'].includes(item))return 'assets/capsulas-cafe-foto.png';
   if(item==='bolo no pote')return 'assets/bolo-no-pote-foto.png';
+  if(item==='bolo fatia')return 'assets/bolo-no-pedaco-foto.png';
   if(item==='bolo no pedaço')return 'assets/bolo-no-pedaco-foto.png';
   if(item==='pudim de leite condensado')return 'assets/pudim-leite-foto.png';
   if(item==='pudim de chocolate')return 'assets/pudim-chocolate-foto.png';
   if(item.startsWith('gelatina'))return 'assets/gelatina-mosaico-foto.png';
   if(item==='chocolates lacta')return 'assets/chocolates-lacta-foto.png';
   if(item==='cocada caseira')return 'assets/cocada-caseira-foto.png';
-  if(item==='salgadinho fofura'||item==='bolo bauducco'||item==='roll bauducco')return 'assets/doces-salgadinhos-foto.png';
+  if(item==='salgadinho fofura'||item==='bolo bauducco'||item==='roll bauducco'||item==='trento'||item==='mentos'||item==='halls'||item==='trident')return 'assets/doces-salgadinhos-foto.png';
   if(item.includes('biscoito')||item.startsWith('barra de cereal')||item.startsWith('bombom')||item.startsWith('chocolate')||item.startsWith('pastilha')||item.startsWith('bala')||item.startsWith('paçoca')||item.startsWith('pé de')||item.startsWith('pingo de leite')||item.startsWith('bananinha')||item.startsWith('salgadinhos'))return 'assets/doces-salgadinhos-foto.png';
   return 'assets/capa-cardapio.jpeg';
 }
