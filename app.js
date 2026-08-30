@@ -5,6 +5,7 @@ const icons={Todos:'*','Salgados e lanches':'S','Pratos e acompanhamentos':'P','
 function photoFor(name,category){
   const item=name.toLowerCase();
   if(category==='Pratos e acompanhamentos'&&!item.startsWith('batata frita')&&!item.startsWith('salada')&&!item.startsWith('omelete'))return null;
+  if(item==='baguete folhada')return 'assets/baguete-folhada-foto.png';
   if(item==='bolinho de carne')return 'assets/bolinho-de-carne-foto.png';
   if(item.startsWith('coxinha'))return 'assets/coxinha-foto.png';
   if(item.startsWith('esfiha'))return 'assets/esfiha-fechada-foto.png';
@@ -32,6 +33,11 @@ function photoFor(name,category){
   if(item==='panqueca com salada')return 'assets/panqueca-salada-foto.png';
   if(item==='bife de linguiça (avulso)')return 'assets/bife-linguica-manta-foto.png';
   if(item==='bife de linguiça com acompanhamento')return 'assets/bife-linguica-acompanhamento-foto.png';
+  if(item==='filé empanado')return 'assets/file-empanado-foto.png';
+  if(item==='filé empanado com arroz e fritas')return 'assets/file-empanado-prato-foto.png';
+  if(item==='refri 200')return 'assets/refri-200-foto.png';
+  if(item==='refri lata')return 'assets/refri-lata-foto.png';
+  if(item==='refri 600')return 'assets/refri-600-foto.png';
   if(item.startsWith('coca cola'))return 'assets/bebidas-cola-foto.png';
   if(item.startsWith('fanta sabor laranja'))return 'assets/refrigerante-laranja-foto.png';
   if(item.startsWith('fanta sabor uva'))return 'assets/refrigerante-uva-foto.png';
