@@ -58,6 +58,7 @@ function photoFor(name,category){
   if(item.startsWith('h2o')||item.startsWith('h20'))return 'assets/h2o-foto.png';
   if(item.startsWith('achocolatado'))return 'assets/achocolatados-foto.png';
   if(item==='iogurte')return 'assets/iogurte-fazenda-foto.png';
+  if(item==='yopró')return 'assets/yopro-foto.png';
   if(item.startsWith('iogurte')||item.startsWith('whey'))return 'assets/iogurtes-foto.png';
   if(item.startsWith('cápsula')||['expresso','café com leite','capuccino','nescau'].includes(item))return 'assets/capsulas-cafe-foto.png';
   if(['expresso','expresso lungo','caf\u00e9 com leite','cappuccino','nescau'].includes(item))return 'assets/capsulas-cafe-foto.png';
