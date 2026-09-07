@@ -23,6 +23,7 @@ function photoFor(name,category){
   if(item==='pão com queijo mussarela')return 'assets/pao-com-queijo-foto.png';
   if(item==='pão com ovo')return 'assets/pao-com-ovo-foto.png';
   if(item==='misto quente')return 'assets/misto-quente-foto.png';
+  if(item==='hamburgão')return 'assets/hamburgao-foto.png';
   if(item==='x - burguer')return 'assets/x-burguer-foto.png';
   if(item==='x - salada')return 'assets/x-salada-foto.png';
   if(item==='x-linguiça')return 'assets/x-linguica-foto.png';
@@ -37,6 +38,7 @@ function photoFor(name,category){
   if(item==='bife de linguiça com acompanhamento')return 'assets/bife-linguica-acompanhamento-foto.png';
   if(item==='filé empanado')return 'assets/file-empanado-foto.png';
   if(item==='filé empanado com arroz e fritas')return 'assets/file-empanado-prato-foto.png';
+  if(item==='filé de frango grelhado + acompanhamentos')return 'assets/file-frango-grelhado-acompanhamentos-foto.png';
   if(item==='refri 200')return 'assets/refri-200-foto.png';
   if(item==='refri lata')return 'assets/refri-lata-foto.png';
   if(item==='refri 600')return 'assets/refri-600-foto.png';
@@ -55,8 +57,7 @@ function photoFor(name,category){
   if(item.startsWith('chá ice tea'))return 'assets/cha-gelado-foto.png';
   if(item.startsWith('h2o')||item.startsWith('h20'))return 'assets/h2o-foto.png';
   if(item.startsWith('achocolatado'))return 'assets/achocolatados-foto.png';
-  if(item==='iogurte fazenda')return 'assets/iogurte-fazenda-foto.png';
-  if(item==='iogurte itambé')return 'assets/iogurte-itambe-foto.png';
+  if(item==='iogurte')return 'assets/iogurte-fazenda-foto.png';
   if(item.startsWith('iogurte')||item.startsWith('whey'))return 'assets/iogurtes-foto.png';
   if(item.startsWith('cápsula')||['expresso','café com leite','capuccino','nescau'].includes(item))return 'assets/capsulas-cafe-foto.png';
   if(['expresso','expresso lungo','caf\u00e9 com leite','cappuccino','nescau'].includes(item))return 'assets/capsulas-cafe-foto.png';
