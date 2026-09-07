@@ -6,10 +6,12 @@ function photoFor(name,category){
   const item=name.toLowerCase();
   if(category==='Pratos e acompanhamentos'&&!item.startsWith('batata frita')&&!item.startsWith('salada')&&!item.startsWith('omelete'))return null;
   if(item==='baguete folhada')return 'assets/baguete-folhada-foto.png';
+  if(item==='baguete')return 'assets/baguete-folhada-foto.png';
   if(item==='bolinho de carne')return 'assets/bolinho-de-carne-foto.png';
   if(item.startsWith('coxinha'))return 'assets/coxinha-foto.png';
   if(item.startsWith('esfiha'))return 'assets/esfiha-fechada-foto.png';
   if(item==='folhado de bauru')return 'assets/folhado-bauru-foto.png';
+  if(item==='folhado 4 queijos')return 'assets/folhado-bauru-foto.png';
   if(item==='fogazza de queijo')return 'assets/fogazza-queijo-foto.png';
   if(item.startsWith('pastel'))return 'assets/pastel-foto.png';
   if(item==='pão de queijo')return 'assets/pao-de-queijo-foto.png';
@@ -38,6 +40,7 @@ function photoFor(name,category){
   if(item==='refri 200')return 'assets/refri-200-foto.png';
   if(item==='refri lata')return 'assets/refri-lata-foto.png';
   if(item==='refri 600')return 'assets/refri-600-foto.png';
+  if(item==='guaraviton')return 'assets/guaraviton-foto.png';
   if(item.startsWith('coca cola'))return 'assets/bebidas-cola-foto.png';
   if(item.startsWith('fanta sabor laranja'))return 'assets/refrigerante-laranja-foto.png';
   if(item.startsWith('fanta sabor uva'))return 'assets/refrigerante-uva-foto.png';
