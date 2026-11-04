@@ -4,7 +4,7 @@ const categories=['Todos',...new Set(MENU.map(item=>item.category))];
 const icons={Todos:'*','Salgados e lanches':'S','Pratos e acompanhamentos':'P','Pratos Rápidos':'R',Bebidas:'B','Doces e sobremesas':'D'};
 function photoFor(name,category){
   const item=name.toLowerCase();
-  if(category==='Pratos e acompanhamentos'&&!item.startsWith('batata frita')&&!item.startsWith('salada')&&!item.startsWith('omelete'))return null;
+  if(category==='Pratos e acompanhamentos'&&!item.startsWith('batata frita')&&!item.startsWith('batatas fritas')&&!item.startsWith('salada')&&!item.startsWith('omelete')&&!['carne moída','feijão carioca'].includes(item))return null;
   if(item==='baguete folhada')return 'assets/baguete-folhada-foto.png';
   if(item==='baguete')return 'assets/baguete-folhada-foto.png';
   if(item==='bolinho de carne')return 'assets/bolinho-de-carne-foto.png';
@@ -20,7 +20,7 @@ function photoFor(name,category){
   if(item==='lanche natural de frango desfiado')return 'assets/lanche-natural-frango-foto.png';
   if(item==='lanche natural de atum desfiado'||item==='sanduíche de patê de atum'||item==='sanduíche de atum')return 'assets/lanche-natural-atum-foto.png';
   if(item==='pão na chapa'||item==='pão na chapa com requeijão')return 'assets/pao-na-chapa-foto.png';
-  if(item==='pão com queijo mussarela')return 'assets/pao-com-queijo-foto.png';
+  if(item==='pão com queijo mussarela'||item==='pão com queijo')return 'assets/pao-com-queijo-foto.png';
   if(item==='pão com ovo')return 'assets/pao-com-ovo-foto.png';
   if(item==='misto quente')return 'assets/misto-quente-foto.png';
   if(item==='hamburgão')return 'assets/hamburgao-foto.png';
