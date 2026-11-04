@@ -4,6 +4,10 @@ const categories=['Todos',...new Set(MENU.map(item=>item.category))];
 const icons={Todos:'*','Salgados e lanches':'S','Pratos e acompanhamentos':'P','Pratos Rápidos':'R',Bebidas:'B','Doces e sobremesas':'D'};
 function photoFor(name,category){
   const item=name.toLowerCase();
+  if(item==='pão com queijo mussarela'||item==='pão com queijo')return 'assets/pao-com-queijo-foto.png';
+  if(item==='batata frita (porção 200gr)'||item==='batatas fritas 200g')return 'assets/batata-frita-foto.png';
+  if(item==='carne moída')return 'assets/carne-moida-foto.png';
+  if(item==='feijão carioca')return 'assets/feijao-carioca-foto.png';
   if(category==='Pratos e acompanhamentos'&&!item.startsWith('batata frita')&&!item.startsWith('batatas fritas')&&!item.startsWith('salada')&&!item.startsWith('omelete')&&!['carne moída','feijão carioca'].includes(item))return null;
   if(item==='baguete folhada')return 'assets/baguete-folhada-foto.png';
   if(item==='baguete')return 'assets/baguete-folhada-foto.png';
@@ -20,7 +24,6 @@ function photoFor(name,category){
   if(item==='lanche natural de frango desfiado')return 'assets/lanche-natural-frango-foto.png';
   if(item==='lanche natural de atum desfiado'||item==='sanduíche de patê de atum'||item==='sanduíche de atum')return 'assets/lanche-natural-atum-foto.png';
   if(item==='pão na chapa'||item==='pão na chapa com requeijão')return 'assets/pao-na-chapa-foto.png';
-  if(item==='pão com queijo mussarela'||item==='pão com queijo')return 'assets/pao-com-queijo-foto.png';
   if(item==='pão com ovo')return 'assets/pao-com-ovo-foto.png';
   if(item==='misto quente')return 'assets/misto-quente-foto.png';
   if(item==='hamburgão')return 'assets/hamburgao-foto.png';
@@ -33,7 +36,6 @@ function photoFor(name,category){
   if(item==='lanche americano')return 'assets/lanche-americano-foto.png';
   if(item==='pão com queijo e ovo')return 'assets/pao-queijo-ovo-foto.png';
   if(item==='presunto fatiado')return 'assets/presunto-fatiado-foto.png';
-  if(item==='batata frita (porção 200gr)'||item==='batatas fritas 200g')return 'assets/batata-frita-foto.png';
   if(item==='salada'||item.startsWith('salada (alface tomate cenoura e pepino)'))return 'assets/salada-foto.png';
   if(item==='omelete simples')return 'assets/omelete-simples-foto.png';
   if(item==='omelete completo')return 'assets/omelete-completo-foto.png';
@@ -45,8 +47,6 @@ function photoFor(name,category){
   if(item==='filé empanado')return 'assets/file-empanado-foto.png';
   if(item==='frango empanado')return 'assets/file-empanado-foto.png';
   if(item==='frango grelhado')return 'assets/frango-grelhado-foto.png';
-  if(item==='carne moída')return 'assets/carne-moida-foto.png';
-  if(item==='feijão carioca')return 'assets/feijao-carioca-foto.png';
   if(item==='filé empanado com arroz e fritas')return 'assets/file-empanado-prato-foto.png';
   if(item==='filé de frango grelhado + acompanhamentos')return 'assets/file-frango-grelhado-acompanhamentos-foto.png';
   if(item==='refri 200')return 'assets/refri-200-foto.png';
