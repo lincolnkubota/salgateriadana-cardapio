@@ -27,8 +27,14 @@ function photoFor(name,category){
   if(item==='x - burguer')return 'assets/x-burguer-foto.png';
   if(item==='x - salada')return 'assets/x-salada-foto.png';
   if(item==='x-linguiça')return 'assets/x-linguica-foto.png';
-  if(item==='batata frita (porção 200gr)')return 'assets/batata-frita-foto.png';
-  if(item.startsWith('salada (alface tomate cenoura e pepino)'))return 'assets/salada-foto.png';
+  if(item==='x - bacon')return 'assets/x-bacon-foto.png';
+  if(item==='x - frango bacon')return 'assets/x-frango-bacon-foto.png';
+  if(item==='x - egg salada')return 'assets/x-egg-salada-foto.png';
+  if(item==='lanche americano')return 'assets/lanche-americano-foto.png';
+  if(item==='pão com queijo e ovo')return 'assets/pao-queijo-ovo-foto.png';
+  if(item==='presunto fatiado')return 'assets/presunto-fatiado-foto.png';
+  if(item==='batata frita (porção 200gr)'||item==='batatas fritas 200g')return 'assets/batata-frita-foto.png';
+  if(item==='salada'||item.startsWith('salada (alface tomate cenoura e pepino)'))return 'assets/salada-foto.png';
   if(item==='omelete simples')return 'assets/omelete-simples-foto.png';
   if(item==='omelete completo')return 'assets/omelete-completo-foto.png';
   if(item==='panqueca avulsa')return 'assets/panqueca-avulsa-foto.png';
@@ -37,6 +43,10 @@ function photoFor(name,category){
   if(item==='bife de linguiça (avulso)')return 'assets/bife-linguica-manta-foto.png';
   if(item==='bife de linguiça com acompanhamento')return 'assets/bife-linguica-acompanhamento-foto.png';
   if(item==='filé empanado')return 'assets/file-empanado-foto.png';
+  if(item==='frango empanado')return 'assets/file-empanado-foto.png';
+  if(item==='frango grelhado')return 'assets/frango-grelhado-foto.png';
+  if(item==='carne moída')return 'assets/carne-moida-foto.png';
+  if(item==='feijão carioca')return 'assets/feijao-carioca-foto.png';
   if(item==='filé empanado com arroz e fritas')return 'assets/file-empanado-prato-foto.png';
   if(item==='filé de frango grelhado + acompanhamentos')return 'assets/file-frango-grelhado-acompanhamentos-foto.png';
   if(item==='refri 200')return 'assets/refri-200-foto.png';

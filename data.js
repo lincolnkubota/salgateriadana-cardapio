@@ -11,6 +11,12 @@ rawMenu['Doces e sobremesas']=rawMenu['Doces e sobremesas'].replace('Pé de moç
 rawMenu['Doces e sobremesas']=rawMenu['Doces e sobremesas'].replace('Pudim de chocolate|5\n','').replace('Pudim de leite condensado|5','Pudim de leite condensado|6');
 rawMenu['Salgados e lanches']+='\nHamburgão|7.5\nFolhado 4 Queijos|8';
 rawMenu.Bebidas+='\nGUARAVITON|5';
+rawMenu['Salgados e lanches']=rawMenu['Salgados e lanches'].replace('Pão na chapa com requeijão|5','Pão na chapa com requeijão|6').replace('Pão com queijo mussarela|6','Pão com queijo|7').replace('X - Burguer|15','X - Burguer|16').replace('X - Salada|17','X - Salada|18')+'\nX - Bacon|19\nX - Frango Bacon|19\nLanche Americano|17\nX - Egg Salada|20\nPão com queijo e ovo|9\nPresunto Fatiado|2';
+rawMenu['Pratos e acompanhamentos']=rawMenu['Pratos e acompanhamentos'].replace('Batata frita (porção 200gr)|6','Batatas fritas 200g|7').replace('Salada (alface tomate cenoura e pepino)|6','Salada|7').replace('Omelete simples|6','Omelete simples|7').replace('Omelete completo|8','Omelete completo|9')+'\nCarne Moída|8\nFeijão Carioca|6';
+rawMenu['Pratos Rápidos']=rawMenu['Pratos Rápidos'].replace('Filé Empanado|8','Frango Empanado|9')+'\nFrango Grelhado|8';
+rawMenu.Bebidas=rawMenu.Bebidas.replace('Água de Coco Kero Côco 330 ml|4.6','Água de Coco Kero Côco 330 ml|4').replace('Água de Coco Du Côco 200ml|3.4','Água de Coco Du Côco 200ml|4');
+rawMenu['Doces e sobremesas']=rawMenu['Doces e sobremesas'].replace('HALLS|2.5','HALLS|2.8').replace('TRIDENT|2.8','TRIDENT|3');
+rawMenu['Salgados e lanches']=rawMenu['Salgados e lanches'].replace('Hamburgão|7.5','Hamburgão|8');
 const emojiFor=category=>({'Salgados e lanches':'🥟','Pratos e acompanhamentos':'🍽️','Pratos Rápidos':'🍽️',Bebidas:'🥤','Doces e sobremesas':'🍰'})[category];
 const specialDescriptions={
   'Panqueca avulsa':'Sabores: presunto e queijo, carne ou frango com requeijão.',
