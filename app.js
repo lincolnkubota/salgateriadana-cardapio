@@ -47,7 +47,7 @@ function photoFor(name,category){
   if(item==='filé empanado')return 'assets/file-empanado-foto.png';
   if(item==='frango empanado')return 'assets/file-empanado-foto.png';
   if(item==='frango grelhado')return 'assets/frango-grelhado-foto.png';
-  if(item==='filé empanado com arroz e fritas')return 'assets/file-empanado-prato-foto.png';
+  if(item==='filé empanado com arroz e fritas'||item==='frango empanado com arroz e fritas')return 'assets/file-empanado-prato-foto.png';
   if(item==='filé de frango grelhado + acompanhamentos')return 'assets/file-frango-grelhado-acompanhamentos-foto.png';
   if(item==='refri 200')return 'assets/refri-200-foto.png';
   if(item==='refri lata')return 'assets/refri-lata-foto.png';
